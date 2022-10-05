@@ -1,0 +1,61 @@
+/* Changes to do for the CSS layout*/
+/*
+  1. "Move" text away from edges (likely requires margin-width, content should try to fit... 70% of page) -- DONE
+  2. Grab a new font family to use for the overall text
+  3. Consider a recolor from yellow (?) likely not necessary, but need to consider new BCKGRND BOXES in 4.
+  4. Create background boxes for the text paragraphs
+  5. Outline the figures/imgs with borders to standout
+  6. Consider using horizontal linebreaks for extended visibilities (Latter half of document)
+  7. Consider changing CERN Requirements section into a nested list system
+    
+    7.1 Accessing Existing Data subsection underneath figure
+        7.1.1 Uses a DL/DT/DD system
+    7.2 References section footer
+        7.2.1 Uses a DL/DT/DD system
+
+
+
+*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body {
+  font-family: "Roboto",Arial, Helvetica, sans-serif;
+  background-color: #fef2c2;   
+  color:#302005;
+  width:80%;
+  margin-left:auto;
+  margin-right:auto;
+}
+.muimpre {
+  width: 75%;
+  margin-left: auto;
+  margin-right:auto;
+}
+
+img {
+  width: 512px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+table {
+  border:0.5px solid black;
+  background-color: #eeffee;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+th, td {
+  border:0.5px solid black;
+}
+
+
+figcaption {
+  font-style: italic;
+  padding: 2px;
+  text-align: center;
+}
+
+p{
+}
