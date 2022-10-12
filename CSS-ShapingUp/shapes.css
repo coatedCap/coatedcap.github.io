@@ -1,0 +1,32 @@
+.fullerBox{
+    position:relative;
+    width: 750px;
+    height:750px;
+    border: 2px solid black;
+    background-color: lightgrey;
+    z-index: 0;
+}
+.redtriangle{
+    position:absolute;
+    left:275px;
+    width:0;
+    height:0;
+    border-style:solid;
+    /* TRBL */
+    border-width:473px 475px 474px 0;
+    border-color:transparent rgb(210, 4, 4) transparent transparent;
+    z-index: 20;
+}
+.fortyfive{
+    position:absolute;
+    top:0;
+    left:0;
+    width:0;
+    height:0;
+    border-style:solid;
+    /* TRBL */
+    border-width:240px 240px 0px 0;
+    border-color:rgb(182, 184, 184) transparent transparent transparent;
+    z-index: 19;
+
+}
