@@ -8,19 +8,105 @@
         <script>
         $(document).ready(function()
         {
-            $("p").click(function()
+            /*$("p").click(function()
             {
                 $(this).hide();
+            });*/
+            $(".energy").click(function(){
+                $("#rttired1").slideToggle(function(){
+                    $("#rttired2").slideToggle();
+                });
+            });
+            $(".job").click(function(){
+                $("#rtjob1").slideToggle(function(){
+                    $("#rtjob2").slideToggle();
+                });
+            });
+            $(".life").click(function(){
+                $("#rtlife1").slideToggle(function(){
+                    $("#rtlife2").slideToggle();
+                });
+            });
+            // RT toggles
+            $("#rttired1").click(function(){
+                $("#rttired1").slideToggle(function(){
+                    $("#crtired1").slideToggle();
+                    $("#rttired2").slideToggle();
+                    $(".energy").replaceWith("currently an athletic climber.");
+                });
+            });
+            $("#rttired2").click(function(){
+                $("#rttired2").slideToggle(function(){
+                    $("#crtired2").slideToggle();
+                    $("#rttired1").slideToggle();
+                    $(".energy").replaceWith("currently a sluggish, but proficient coder.");
+                });
+            });
+            $("#rtjob1").click(function(){
+                $("#rtjob1").slideToggle(function(){
+                    $("#crjob1").slideToggle();
+                    $("#rtjob2").slideToggle();
+                    $("#fill").slideToggle();
+                    $(".job").replaceWith("<br>He is also an accomplished gorumet cook.");
+                });
+            });
+            $("#rtjob2").click(function(){
+                $("#rtjob2").slideToggle(function(){
+                    $("#crjob2").slideToggle();
+                    $("#rtjob1").slideToggle();
+                    $(".job").slideToggle(function(){
+                        $("#fill").slideToggle();
+                        $(".job").replaceWith('<br>He is a self-employed spreadsheet master. He does and does not live in the woods.');
+                    });
+                });
+            });
+            $("#rtlife1").click(function(){
+                $("#rtlife1").slideToggle(function(){
+                    $("#crlife1").slideToggle();
+                    $("#rtlife2").slideToggle();
+                    $(".life").replaceWith('<br>Bill used to be in the military, but grew weary about the strict lifestyle and the intensive training.<br>It was too stressful for him. He now enjoys civilian life.');
+                });
+            });
+            $("#rtlife2").click(function(){
+                $("#rtlife2").slideToggle(function(){
+                    $("#crlife2").slideToggle();
+                    $("#rtlife1").slideToggle();
+                    $(".life").replaceWith("<br>Bill didn't try very hard in his life and was fairly lazy.<br>He used to be called a prodigy if he put work into it.<br>Though, he is beginning to tire of stagnation.");
+                });
+            });
+            // Reset
+            $("#reset").click(function(){
+                location.reload();
             });
 
         });
         </script>
     </head>
     <body>
-        <p>
-            placeholding
-        </p>
-        <p class="clippet">Curmudgeon</p>
-        <p class="clippet">Digger</p>
+        <div id="wrapper">
+            <h1 id="mainline">
+                Bill is <span class="energy">a regular</span> <span class="job">desk worker</span> <span id="fill">who has lived a</span> <span class="life">rather neutral life.</span>
+            </h1>
+            <hr>
+            <ul class="choicerow">
+                <li id="crtired1">Bill spends a lot of time at the gym but is particularly good at climbing.</li>
+                <li id="crtired2">Bill spends a lot of time at a computer typing away on code.</li>
+                <li id="crjob1">Bill often lies about his desk job.<br>He works as a sous-chef at a high-class restaurant.</li>
+                <li id="crjob2">Bill often lies about his desk job.<br>He is his own boss and simply moves information between cells on a spreadsheet.<br>He is unsure where his money comes from.<br>He should try going to the woods.</li>
+                <li id="crlife1">Bill entered the military out of high school, but dropped it after one term.<br>He wasn't a massive fan of the rigid lifestyle.</li>
+                <li id="crlife2">Bill floated through life, doing the bare minimum to get around.<br>He's thinking of turning things around though.</li>
+            </ul>
+            <div id="floatclear"><br><hr></div>
+            <ul class="rowtwo">
+                <li id="rttired1">Bill spends a lot of time at the gym but is particularly good at climbing.</li>
+                <li id="rttired2">Bill spends a lot of time at a computer typing away on code.</li>
+                <li id="rtjob1">Bill often lies about his desk job.<br>He works as a sous-chef at a high-class restaurant.</li>
+                <li id="rtjob2">Bill often lies about his desk job.<br>He is his own boss and simply moves information between cells on a spreadsheet.<br>He is unsure where his money comes from.<br>He should try going to the woods.</li>
+                <li id="rtlife1">Bill entered the military out of high school, but dropped it after one term.<br>He wasn't a massive fan of the rigid lifestyle.</li>
+                <li id="rtlife2">Bill floated through life, doing the bare minimum to get around.<br>He's thinking of turning things around though.</span>
+            </ul>
+            <div id="floatclear"><br><hr></div>
+            <div id="reset">Reset Bill</div>
+        </div>
     </body>
 </html>
