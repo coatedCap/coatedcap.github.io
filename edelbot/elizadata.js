@@ -95,13 +95,11 @@ var elizaKeywords = [
 
 ["xnone", 0, [
  ["*", [
-     "I'm not sure I understand you fully.",
+     "What does that even mean?",
      "Please go on.",
-     "What does that suggest to you ?",
-     "Do you feel strongly about discussing such things ?",
-     "That is interesting.  Please continue.",
-     "Tell me more about that.",
-     "Does talking about this bother you ?"
+     "Uh-huh.",
+     "Could you elaborate?",
+     "We value coherency."
   ]]
 ]],
 ["sorry", 0, [
@@ -120,80 +118,69 @@ var elizaKeywords = [
 ["remember", 5, [
  ["* i remember *", [
      "Do you often think of (2) ?",
-     "Does thinking of (2) bring anything else to mind ?",
      "What else do you recollect ?",
      "Why do you remember (2) just now ?",
-     "What in the present situation reminds you of (2) ?",
-     "What is the connection between me and (2) ?",
-     "What else does (2) remind you of ?"
+     "What else does (2) remind you of ?",
+     "Are there other instances similar to this?"
   ]],
  ["* do you remember *", [
      "Did you think I would forget (2) ?",
-     "Why do you think I should recall (2) now ?",
-     "What about (2) ?",
+     "The 21st Night of September? For what purpose?",
+     "About what ?",
      "goto what",
      "You mentioned (2) ?"
   ]],
  ["* you remember *", [
-     "How could I forget (2) ?",
-     "What about (2) should I remember ?",
+     "I've been writing your words down.",
+     "IS there something you're trying to memory check me on?",
      "goto you"
   ]]
 ]],
 ["forget", 5, [
  ["* i forget *", [
-     "Can you think of why you might forget (2) ?",
-     "Why can't you remember (2) ?",
-     "How often do you think of (2) ?",
-     "Does it bother you to forget that ?",
-     "Could it be a mental block ?",
+     "Is forgetfulness common to you ?",
      "Are you generally forgetful ?",
-     "Do you think you are suppressing (2) ?"
+     "You should refresh yourself on it then."
   ]],
  ["* did you forget *", [
      "Why do you ask ?",
      "Are you sure you told me ?",
-     "Would it bother you if I forgot (2) ?",
+     "I'm writing what you say down if you aren't sure.",
      "Why should I recall (2) just now ?",
      "goto what",
-     "Tell me more about (2)."
+     "I might have."
   ]]
 ]],
 ["if", 3, [
  ["* if *", [
-     "Do you think it's likely that (2) ?",
-     "Do you wish that (2) ?",
      "What do you know about (2) ?",
      "Really, if (2) ?",
      "What would you do if (2) ?",
-     "But what are the chances that (2) ?",
-     "What does this speculation lead to ?"
+     "How likely do you think (2) is?",
+     "What are you aiming for here?"
   ]]
 ]],
 ["dreamed", 4, [
  ["* i dreamed *", [
      "Really, (2) ?",
-     "Have you ever fantasized (2) while you were awake ?",
-     "Have you ever dreamed (2) before ?",
+     " (2) ?",
+     "Was this during the day or night?",
      "goto dream"
   ]]
 ]],
 ["dream", 3, [
  ["*", [
-     "What does that dream suggest to you ?",
+     "What do you dream of ?",
      "Do you dream often ?",
-     "What persons appear in your dreams ?",
-     "Do you believe that dreams have something to do with your problem ?"
+     "Do any people appear in your dreams ?",
+     "Are dreams worth anything to you ?"
   ]]
 ]],
 ["perhaps", 0, [
  ["*", [
-     "You don't seem quite certain.",
-     "Why the uncertain tone ?",
-     "Can't you be more positive ?",
-     "You aren't sure ?",
-     "Don't you know ?",
-     "How likely, would you estimate ?"
+     "You don't seem certain.",
+     "Why the uncertainty ?",
+     "You aren't sure ?"
   ]]
 ]],
 ["name", 15, [

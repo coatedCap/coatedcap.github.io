@@ -3,7 +3,7 @@
 	<TITLE>Eliza (elizabot.js)</TITLE>
 	<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript" SRC="elizabot.js"></SCRIPT>
 	<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript" SRC="elizadata.js"></SCRIPT>
-
+  <link rel="stylesheet" href="style.css">
 <SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
 
 
@@ -47,7 +47,7 @@ function elizaStep() {
 	}
 	else if (elizaLines.length == 0) {
 		// no input and no saved lines -> output initial
-		var initial = 'ELIZA: ' + eliza.getInitial();
+		var initial = 'EDEL: ' + eliza.getInitial();
 		elizaLines.push(initial);
 		f.e_display.value = initial + '\n';
 	}
@@ -63,7 +63,7 @@ function elizaStep() {
 
 <CENTER>
 <P>&nbsp;</P>
-<H3>Eliza</H3>
+<H2>Edelwriez</H2>
 <TABLE BORDER="0" CELLSPACING="10" CELLPADDING="0">
 <FORM NAME="e_form" onsubmit="elizaStep();return false">
 <TR><TD COLSPAN="2"><TEXTAREA NAME="e_display" COLS="60" ROWS="20"></TEXTAREA></TD></TR>
@@ -74,7 +74,7 @@ function elizaStep() {
 </FORM>
 </TABLE>
 </CENTER>
-
+<!--
 <P>&nbsp;</P>
 <P ALIGN="center">For a comfortable terminal-like interface see the <A HREF="http://www.masswerk.at/elizabot/eliza.html">ELIZA-Terminal</A>.</P>
 <P>&nbsp;</P>
@@ -233,6 +233,6 @@ Note:   &quot;elizaPostTransforms&quot; is not a standard ELIZA feature and was 
 <TR><TD COLSPAN="2" STYLE="font-family: arial,helvetica,sans-serif; font-size: 12px;">N. Landsteiner 2005; &lt;<A HREF="http://www.masswerk.at/" TARGET="_blank">http://www.masswerk.at</A>&gt;</SMALL></TD></TR>
 <TR><TD COLSPAN="2">&nbsp;</TD></TR>
 </TABLE>
-
+-->
 </BODY>
 </HTML>
