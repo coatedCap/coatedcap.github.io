@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap');
+*{
+    font-family:'Roboto Mono',sans-serif;
+}
+body,html{
+    height:100%;
+    background-color: rgb(21, 35, 35);
+}
+#wrapper{
+    overflow:hidden;
+    width: 60%;
+    height:auto;
+    min-height:100%;
+    margin-left:auto;
+    margin-right:auto;
+    border:0px 5px solid rgb(160, 167, 172);
+    background-color: black;
+    color:rgb(5, 190, 5);
+}
+
+p{
+    width:90%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:5%;
+}
+h1,h2{
+    text-align: center;
+}
+h2{
+    margin-bottom:0;
+}
+#status{
+    text-align: center;
+    width:50%;
+    margin-left:auto;
+    margin-right:auto;
+}
+#confirm{
+    display:inline-block;
+    width:15%;
+    padding: 10px;
+    margin-top:5%;
+    margin-left:auto;
+    margin-right:auto;
+}
+#confirm:hover{
+    transition:0.25s;
+    background-color:  rgb(5, 190, 5);
+    color:black;
+}
+#cancel{
+    display:inline-block;
+    margin-top:5%;
+    width:15%;
+    padding:10px;
+    margin-left:auto;
+    margin-right:auto;
+}
+#cancel:hover{
+    transition:0.25s;
+    background-color:  rgb(5, 190, 5);
+    color:black;
+}
+#yep:hover{
+    transition:0.25s;
+    background-color:  rgb(5, 190, 5);
+    color:black;
+}
+ul{
+    list-style-type:none;
+    margin-right:auto;
+}
+.ship{
+    float:left;
+    width:30%;
+    height:100%;
+    margin-left:10%;
+    margin-right:10%;
+}
+.ship:hover{
+    transition:0.25s;
+    background-color:  rgb(5, 190, 5);
+    color:black;
+}
+.clear{
+    clear: both;
+}
+#infoScreen{
+    display:none;
+}
+.intro{
+    margin-top: 7.5%;
+    margin-bottom: 7.5%;
+}
