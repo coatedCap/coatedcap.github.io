@@ -1,5 +1,41 @@
 
-$.getJSON('http://api.open-notify.org/astros.json?callback=?', function(data) {
+$(document).ready(function(){
+    $('#confirm').click(function(){
+        $('#cancel').fadeOut();
+        $('.intro').fadeOut();
+        setTimeout(function(){
+            document.getElementById('yep').innerHTML="Connecting...";
+            setTimeout(function(){
+                document.getElementById('yep').innerHTML="Connecting..";
+                setTimeout(function(){
+                    document.getElementById('yep').innerHTML="Connecting.";
+                    setTimeout(function(){
+                        document.getElementById('yep').innerHTML="Connecting";
+                        setTimeout(function(){
+                            document.getElementById('yep').innerHTML=">> ESTABLISH CONNECTION <<";
+                        },750);
+                    },1250);
+                },1250);
+            },1250);
+        },1250);
+        $('#confirm').fadeOut();
+    });
+    $('#cancel').click(function(){
+        close();
+    });
+    $('#yep').click(function(){
+        $('#status').fadeOut();
+        $('.intro').fadeOut();
+        setTimeout(function(){
+            $('#infoScreen').fadeIn();
+        },750);
+
+    });
+});
+//free HTTP RQ
+//let json_link = 'http://api.open-notify.org/astros.json?callback=?';
+let json_link = 'https://coatedcap.github.io/astros.json';
+$.getJSON(json_link, function(data) {
     var crafts = [];
     var cnums = [];
     var belongsto = [];
@@ -23,35 +59,6 @@ $.getJSON('http://api.open-notify.org/astros.json?callback=?', function(data) {
             $(listID).append('<li>'+belongsto[i][k]+'</li>');
         }
     }
-});
-$(document).ready(function(){
-    $('#confirm').click(function(){
-        $('#cancel').fadeOut();
-        $('.intro').fadeOut();
-        setTimeout(function(){
-            document.getElementById('yep').innerHTML="Connecting...";
-            setTimeout(function(){
-                document.getElementById('yep').innerHTML="Connecting..";
-                setTimeout(function(){
-                    document.getElementById('yep').innerHTML="Connecting.";
-                    setTimeout(function(){
-                        document.getElementById('yep').innerHTML="Connecting";
-                        setTimeout(function(){
-                            document.getElementById('yep').innerHTML=">> ESTABLISH CONNECTION <<";
-                        },750);
-                    },1250);
-                },1250);
-            },1250);
-        },1250);
-        $('#confirm').fadeOut();
-    });
-    $('#yep').click(function(){
-        $('#status').fadeOut();
-        setTimeout(function(){
-            $('#infoScreen').fadeIn();
-        },750);
-
-    });
 });
 
 // message: "success"
