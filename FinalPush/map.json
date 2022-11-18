@@ -4,23 +4,28 @@
             "roomID":0,
             "event":"none",
             "connect":"1",
-            "weight":0.65
+            "weight":0.35
         },
+        {
+            "roomID":7,
+            "event":"combat",
+            "connect":"1",
+            "weight":0.35},
         {
             "roomID":1,
             "event":"none",
             "connect":"2",
-            "weight":0.1},
+            "weight":0.25},
         {
             "roomID":2,
             "event":"reward",
             "connect":"1",
-            "weight":0.16},
+            "weight":0.25},
         {
             "roomID":3,
             "event":"reward",
             "connect":"2",
-            "weight":0.1},
+            "weight":0.25},
         {
             "roomID":4,
             "event":"riskpc",
@@ -35,12 +40,7 @@
             "roomID":6,
             "event":"risktrade",
             "connect":"2",
-            "weight":0.15},
-        {
-            "roomID":7,
-            "event":"combat",
-            "connect":"1",
-            "weight":0.35},
+            "weight":0.1},
         {
             "roomID":8,
             "event":"combat",
