@@ -262,7 +262,7 @@ function enemyRetaliate(e_type){
                 outgoing = (2 + Math.round(Math.random()*2)+1);
                 guarded = pGUARD - outgoing;
                 if(guarded < 0){
-                    textarea.value += outgoing+"shield damage and "+(guarded*-1)+" health damage.";
+                    textarea.value += outgoing+"shield damage and "+(guarded*-1)+" health damage.\r\n";
                     states[1] = states[1] + guarded;
                     pGUARD=0;
                 }
@@ -281,7 +281,7 @@ function enemyRetaliate(e_type){
                 outgoing = (2 + Math.round(Math.random()*2)+1);
                 guarded = pGUARD - outgoing;
                 if(guarded < 0){
-                    textarea.value += outgoing+"shield damage and "+(guarded*-1)+" health damage.";
+                    textarea.value += outgoing+"shield damage and "+(guarded*-1)+" health damage.\r\n";
                     states[1] = states[1] + guarded;
                     pGUARD=0;
                 }
