@@ -1,20 +1,35 @@
 html{
     background-color: black;
     color:aliceblue;
+    width:100%;
+    margin:0;
+    padding:0;
 }
 body{
-    width: 80%;
-    margin-top:5%;
-    margin-left:auto;
-    margin-right:auto;
+    margin:0;
+    padding:0;
 }
-textarea{
-    width:100%;
+#displayTerminal{
+    display:block;
     background-color: black;
     color:greenyellow;
     font-weight: bolder;
-    text-align: center;
+    resize:none;
+    margin-left: auto;
+    margin-right: auto;
 }
-div{
-    margin-bottom:10%;
+#wrapper{
+    width:80%;
+    margin: 5% auto;
+}
+#commandTerminal{
+    width: 25%;
+    color:greenyellow;
+    background-color: black;
+    text-align: right;
+}
+form{
+    text-align: center;
+    margin-left: auto;
+    margin-right:auto;
 }
