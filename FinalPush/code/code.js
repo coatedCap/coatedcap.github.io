@@ -539,8 +539,8 @@ function sendMSG(){
                         textarea.value+="\t\tYour target radar begins to ping rapidly as a perceived hostile is rapidly approaching.\r\n\t\tHostiles are relentless and will chase you forever. You have no other choice but to fight.\r\n\t\tPrepare for Combat!\r\n";
                         let rand = Math.random()*4;
                         console.log("Enemy: "+Math.round(rand)+"\tRoll: "+rand);
-                        currEnemy.push(enemy[rand]);
-                        currEnemy.push(enemy[rand][1]+0);
+                        currEnemy.push(enemy[Math.round(rand)]);
+                        currEnemy.push(enemy[Math.round(rand)][1]+0);
                         currEnemy.push(0);
                         textarea.value += "\r\n\t\tYou have encountered a << "+currEnemy[0][0]+" >>. It has "+currEnemy[1]+" HP.\r\n\r\n";
                         generateCombatScene();
