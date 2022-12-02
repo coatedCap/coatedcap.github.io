@@ -9,6 +9,10 @@ body{
     margin:0;
     padding:0;
 }
+.exTermText{
+    font-family:monospace;
+    color:greenyellow;
+}
 #displayTerminal{
     display:block;
     background-color: black;
@@ -26,7 +30,8 @@ body{
     width: 25%;
     color:greenyellow;
     background-color: black;
-    text-align: right;
+    text-align: center;
+    font-family: monospace;
 }
 form{
     text-align: center;
