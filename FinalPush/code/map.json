@@ -7,11 +7,6 @@
             "weight":0.4
         },
         {
-            "roomID":7,
-            "event":"combat",
-            "connect":"1",
-            "weight":0.30},
-        {
             "roomID":1,
             "event":"none",
             "connect":"2",
@@ -41,6 +36,11 @@
             "event":"risktrade",
             "connect":"2",
             "weight":0.1},
+        {
+            "roomID":7,
+            "event":"combat",
+            "connect":"1",
+            "weight":0.30},
         {
             "roomID":8,
             "event":"combat",

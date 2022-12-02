@@ -3,52 +3,87 @@
     <head>
         <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
         <link rel="stylesheet" href="style.css">
-        <script src="code.js"></script>
+        <script src="code/code.js"></script>
+        <title>Tunnel of Asplen Demo Help Page</title>
     </head>
     <body>
-        <p>Overview:<br><br>
-            An in-browser minigame built off HTML, CSS, and a flexible backend.<br>
-            The game will be a fixed, but randomized dungeon crawler with card combat.<br>
-            To give a more clear genre definition, this will take after the roguelite style and would resemble games such as Slay the Spire and Inscryption.<br>
-            The entire game is meant to be played in one sitting which means there will likely be no save system in place for this project. The game is meant to be played on a browser, but mobile support will be looked into towards the end of the development cycle.<br>
-            Image graphics are unlikely to be included, but text descriptions will be provided. The ideal is to have simple graphics that will present easy information with the ability to see more detailed text on hover over or clicking.
-            The focus of this project is primarily to study the back-end development and experiment on how much load can be placed on the coding aspect. It is likely that Javascript will be used as the simple fallback, but hopefully ASP.NET or a similar language can be used. JSON files will be used to store the main data for the game.<br>
-            This project also serves as a proof of concept for a different application for a chat messaging service such as Discord which allows for users to create “Bot Applications”.
-            <br><br>
-            Display:<br><br>
-            There will be a textbox to serve as a terminal for players to read information about the current situation or previous events. Above the textbox will be a small display window that will serve as the main interaction window. Interactions will include choosing a path/room, seeing the combat situation or reviewing player choices.
-            It is currently unclear at this time whether the player cards will be viewed within the display window or as a separate row or element.<br>
-            Text descriptions will be the main information provider.
-            <br><br>
-            Gameplay:<br><br>
-            This is a primarily click/press only interaction medium. It will consist of choosing paths through risk-reward measures.
-            The meat of the project will stem from creating the card, enemy and room data followed by integrating those into retrievable information through the back-end code.
+        <div id="wrapper">
+            <h1>Demo: Tunnel of Asplen (A CSCI 202 Project)</h1>
+            <h2>Abstract</h2>
+            <p>
+                Welcome to the Tunnel of Asplen.<br>The Tunnel is a more akin to a massive dungeon construct stretching below the surface of the recently discovered super Earth-like planet, Rikshasa, for an estimated 75,000 kilometers. To date, only 1% of the dungeon has been mapped with the safest depths mapped up to 400 kilometers.<br>
+                You are a contracted combat patroller who has been sent to perform a routine check on the first 10 kilometers. While most of the "safe" 400 kilometers are relatively harmless, routine patrols are required to keep the advertised safety rating up.
             </p>
-            <textarea rows="25">
-
-
-
-
-
-
-
-
-
-
-PREDICTED DISPLAY WINDOW
-THIS IS NOT A WORKING PROTOTYPE
-THIS IS A PRESENTATION TEMPLATE</textarea>
-            <textarea rows="8">
-
-
-
-THIS IS WHERE THE TERMINAL IS. THE TEXT WILL BE LARGER IN THE FUTURE.
-INFORMATION WILL BE DISPLAYED LIKE SO:
-{PLAYER} HAS DEALT 250 DAMAGE TO {TARGET}
-
-
-
-            </textarea>
-            <div></div>
+            <h2>How to Play: Basics</h2>
+            <p>
+                The game takes place in a text terminal as defined by a form submission section and an informative textarea.
+                The terminal recognizes a set of basic commands to facilitate the simple gameplay loop. When a correct and accepted command is inputted, the main terminal will update with new information. (At the time of writing this page at 02:19 on December 1, 2022, screenreader compatibility has not been determined).
+                <ul>
+                    <li>Move
+                        <ul>
+                            <li>This command prompts your patrol to move into the next kilometer.</li>
+                            <li>This command must be communicated alone. It does not take any extra arguments.</li>
+                            <li>This command cannot be used when in combat or when a Kilometer Event is first encountered.</li>
+                        </ul>
+                    </li>
+                    <li>Choose [choice number]
+                        <ul>
+                            <li>This command accepts ONE argument.</li>
+                            <li>This command is specific to a Kilometer Event that provides options.</li>
+                            <li>To select an option during a Kilometer Event, use <span class="exTermText">choose [choice number]</span><br>Replace the [choice number] field with the appropriate option digit. Do not include the brackets.</li>
+                        </ul>
+                    </li>
+                    <li>Progress
+                        <ul>
+                            <li>This command can be used at any time to generate a report.</li>
+                            <li>This report provides the player's current health points, Kilometer Position, current Kilometer Event and Card Deck.</li>
+                            <li>This command does not take any other arguments.</li>
+                        </ul>
+                    </li>
+                </ul>
+                The player is allowed to choose from a set of fixed "ability cards". These ability cards are utilized during a Combat-type Kilometer Event. The Ability Cards are divided into three Categories of Support, Defend and Attack cards. A set of these cards are referred to as "Ability Card Decks" (ACD). Each card has a unique ID code that can be used to utilize its power or gain additional information.
+                <ul title="Basic Card Sets">
+                    <li>Attacker 
+                        <ul>
+                            <li>Has: 0,2,3,4,6</li>
+                        </ul>
+                    </li>
+                    <li>Defender
+                        <ul>
+                            <li>Has: 0,1,5,7,11</li>
+                        </ul>
+                    </li>
+                    <li>Balanced
+                        <ul>
+                            <li>Has: 0,1,3,4,5</li>
+                        </ul>
+                    </li>
+                </ul>
+                To find more details about these card IDs, we have a <a target="_blank" rel="noopener noreferrer" href="compendium.html">compendium of all available cards (not complete).</a>
+            </p>
+            <h2>Combat</h2>
+            <p>
+                As a patroller, you will no doubt encounter hostiles along the way. Thanks to the Combat Unit Network Technology System (C.U. Net), you can make combat decisions as if you are taking turns in a card game. In the upper depths like the ones you are patrolling, hostiles are sluggish enough that you will almost always take the first action. Your terminal will decide on potential actions based on your Ability Card Deck (ACD). These are not necessarily the best options every time as the system is still in active development. You will usually receive up to 3 card options per turn.<br>
+                To make use of the cards, your terminal will accept the new command: <span class="exTermText">use [card ID]</span><br>
+                Your selected card ID can only be one from the chosen set of cards by the C.U. Net.<br>
+                The enemy will follow your action with their own.<br>
+                During battle, you will need to maintain your Health Point Wellness (HP). Should your HP reach zero, your command interface will disconnect and you will be dismissed from the operation. Hostiles also have HP and will expire after their perceived HP reaches zero.<br>
+                To maintain your HP better, you may have some cards that provide protective shielding (Guard Shields). These will directly absorb incoming external damage. The damage absorbed will reduce the power of the Guard Shield until it is empty. In simpler terms, it is your temporary second health bar. Guard Shields are only generated through Card Effects and have an extremely large capacity of absorption. Guard Shields will reset after every combat encounter.<br>
+                In addition, you may have chosen an ACD that contains a "Healing" card. These will directly regain your own HP, but are very weak in power usually.
+            </p>
+            <h2>Starting the Game</h2>
+            <p>You may revisit this page at any time by keeping this tab open or using the <span class="exTermText">HELP</span> command.
+                <br>
+                When you are ready, input <span class="exTermText">START</span> in the following textfield and hit Submit. This will open a new page with the main game interface.
+                <br>
+                <form style="text-align: center;"name="cTerm" onsubmit="gamePage();return false;">
+                    <input type="text" name="startGame">
+                    <input type="submit" value="Submit">
+                </form>
+            </p>
+        </div>
     </body>
+    <footer style="font-size:small;text-align: center;">
+        This is a project created for the sole purpose of meeting Final Project requirements as defined by the WWU CSCI 202 class hosted by Dustin O'Hara.<br>Any creative similarities are the result of coincidence and is not intended to infringe on copyrighted materials.
+    </footer>
 </html>

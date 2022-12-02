@@ -1,8 +1,54 @@
 {
     "enemy":[
+        {
+            "name":"Rat",
+            "hp":8,
+            "style":"normal",
+            "set":0
+        },
+        {
+            "name":"Living Shield",
+            "hp":20,
+            "style":"defensive",
+            "set":0
 
+        },
+        {
+            "name":"Living Blade",
+            "hp":8,
+            "style":"aggressive",
+            "set":0
+
+        },
+        {
+            "name":"Goblin",
+            "hp":15,
+            "style":"normal",
+            "set":0
+
+        },
+        {
+            "name":"Rogue Mage",
+            "hp":20,
+            "style":"normal",
+            "set":0
+
+        }
     ],
     "boss":[
-        
+        {
+            "name":"Greater Defender",
+            "hp":65,
+            "style":"defensive",
+            "set":0
+
+        },
+        {
+            "name":"Greater Mage",
+            "hp":50,
+            "style":"normal",
+            "set":0
+
+        }
     ]
 }

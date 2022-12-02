@@ -1,6 +1,7 @@
 {
     "card":[
         {
+            "name":"Strike [0]",
             "type":"atk",
             "rarity":0,
             "effect":["dmg"],
@@ -10,6 +11,7 @@
             "id":0            
         },
         {
+            "name":"Heal [1]",
             "type":"support",
             "rarity":0,
             "effect":["heal"],
@@ -19,6 +21,7 @@
             "id":1            
         },
         {
+            "name":"Defend [2]",
             "type":"defend",
             "rarity":0,
             "effect":["def"],
@@ -28,121 +31,94 @@
             "id":2            
         },
         {
+            "name":"Healing Strike [3]",
             "type":"atk",
             "rarity":1,
-            "effect":["dmg","heal",3],
+            "effect":["dmg","heal",2],
             "power":4,
             "target":"enemy",
-            "special":1,
+            "special":5,
             "id":3            
         },
         {
+            "name":"Defending Strike [4]",
             "type":"atk",
             "rarity":1,
             "effect":["dmg","def",3],
             "power":4,
             "target":"enemy",
-            "special":1,
+            "special":5,
             "id":4            
         },
         {
-            "type":"atk",
-            "rarity":1,
-            "effect":["dmg","def",3],
-            "power":4,
-            "target":"enemy",
-            "special":2,
-            "id":0            
-        },
-        {
-            "type":"atk",
-            "rarity":1,
-            "effect":["dmg","heal",3],
-            "power":4,
-            "target":"self",
-            "special":2,
-            "id":0            
-        },
-        {
+            "name":"Shield Recover [5]",
             "type":"defend",
-            "rarity":0,
+            "rarity":1,
             "effect":["def","heal",3],
             "power":4,
             "target":"self",
-            "special":1,
-            "id":0            
+            "special":5,
+            "id":5            
         },
         {
+            "name":"Power Stab [6]",
+            "type":"atk",
+            "rarity":2,
+            "effect":["dmg"],
+            "power":6,
+            "target":"enemy",
+            "special":0,
+            "id":6            
+        },
+        {
+            "name":"Strong Shield [7]",
             "type":"defend",
-            "rarity":0,
-            "effect":["def","heal",3],
-            "power":4,
-            "target":"enemy",
+            "rarity":2,
+            "effect":["def"],
+            "power":6,
+            "target":"self",
             "special":0,
-            "id":0            
+            "id":7            
         },
         {
-            "type":"atk",
-            "rarity":0,
-            "effect":["dmg"],
-            "power":4,
-            "target":"enemy",
+            "name":"Self-Aid [8]",
+            "type":"support",
+            "rarity":2,
+            "effect":["heal"],
+            "power":5,
+            "target":"self",
             "special":0,
-            "id":0            
+            "id":8           
         },
         {
-            "type":"atk",
-            "rarity":0,
-            "effect":["dmg"],
-            "power":4,
-            "target":"enemy",
+            "name":"Bulk-Up [9]",
+            "type":"support",
+            "rarity":3,
+            "effect":["pwr"],
+            "power":2,
+            "target":"self",
             "special":0,
-            "id":0            
+            "id":9           
         },
         {
+            "name":"Multi-Strike [10]",
             "type":"atk",
-            "rarity":0,
-            "effect":["dmg"],
+            "rarity":3,
+            "effect":["dmg",3],
             "power":4,
             "target":"enemy",
-            "special":0,
-            "id":0            
+            "special":6,
+            "id":10            
         },
         {
-            "type":"atk",
-            "rarity":0,
-            "effect":["dmg"],
-            "power":4,
-            "target":"enemy",
-            "special":0,
-            "id":0            
-        },
-        {
-            "type":"atk",
-            "rarity":0,
-            "effect":["dmg"],
-            "power":4,
-            "target":"enemy",
-            "special":0,
-            "id":0            
-        },
-        {
-            "type":"atk",
-            "rarity":0,
-            "effect":["dmg"],
-            "power":4,
-            "target":"enemy",
-            "special":0,
-            "id":0            
-        },
-        {
-            "type":"atk",
-            "rarity":0,
-            "effect":["dmg"],
-            "power":4,
-            "target":"enemy",
-            "special":0,
-            "id":0            
+            "name":"Bulking Power [11]",
+            "type":"defend",
+            "rarity":3,
+            "effect":["def","pwr",2],
+            "power":6,
+            "target":"self",
+            "special":5,
+            "id":11            
         }
     ]
 }
