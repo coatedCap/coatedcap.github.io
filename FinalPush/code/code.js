@@ -324,7 +324,7 @@ function enemyRetaliate(e_type){
                 outgoing = (3 + Math.round(Math.random()*2)+1);
                 guarded = pGUARD - outgoing;
                 if(guarded < 0){
-                    textarea.value += outgoing+" shield damage and "+(guarded*-1)+" health damage.";
+                    textarea.value += outgoing+" shield damage and "+(guarded*-1)+" health damage.\r\n";
                     states[1] = states[1] + guarded;
                     pGUARD=0;
                 }
@@ -344,7 +344,7 @@ function enemyRetaliate(e_type){
                 outgoing = (3 + Math.round(Math.random()*2)+1);
                 guarded = pGUARD - outgoing;
                 if(guarded < 0){
-                    textarea.value += outgoing+" shield damage and "+(guarded*-1)+" health damage.";
+                    textarea.value += outgoing+" shield damage and "+(guarded*-1)+" health damage.\r\n";
                     states[1] = states[1] + guarded;
                     pGUARD=0;
                 }
@@ -390,7 +390,7 @@ ID is minorly redundant as they are in order in JSON and are 0 structured
             shieldDown = BossPick[2] - damageSum;
             if(shieldDown < 0){
                 //shield down is added as it will always be negative
-                textarea.value += "dealt "+BossPick[2]+" guard damage and "+ (shieldDown*-1)+" health damage";
+                textarea.value += "dealt "+BossPick[2]+" guard damage and "+ (shieldDown*-1)+" health damage\r\n";
                 BossPick[1] = BossPick[1] + shieldDown; 
                 BossPick[2] = 0;
             }
@@ -425,7 +425,7 @@ ID is minorly redundant as they are in order in JSON and are 0 structured
             shieldDown = BossPick[2] - damageSum;
             if(shieldDown < 0){
                 //shield down is added as it will always be negative
-                textarea.value += "dealt "+BossPick[2]+" guard damage and "+ (shieldDown*-1)+" health damage";
+                textarea.value += "dealt "+BossPick[2]+" guard damage and "+ (shieldDown*-1)+" health damage\r\n";
                 BossPick[1] = BossPick[1] + shieldDown; 
                 BossPick[2] = 0;
             }
@@ -473,7 +473,7 @@ ID is minorly redundant as they are in order in JSON and are 0 structured
             shieldDown = BossPick[2] - damageSum;
             if(shieldDown < 0){
                 //shield down is added as it will always be negative
-                textarea.value += "dealt "+BossPick[2]+" guard damage and "+ (shieldDown*-1)+" health damage";
+                textarea.value += "dealt "+BossPick[2]+" guard damage and "+ (shieldDown*-1)+" health damage\r\n";
                 BossPick[1] = BossPick[1] + shieldDown;
                 BossPick[2] = 0;
             }
@@ -576,6 +576,11 @@ function sendMSG(){
                     else if(currEnemy[1] >= 0){
                         generateCombatScene();
                     }
+                    else if(currEnemy[1]<=0){
+                        states[3]=1;
+                        textarea.value+="\r\n\t\tYou have won the fight!\r\nKilometer Event completed. You may proceed by executing: MOVE\r\n";
+
+                    }
                     else{
                         states[3]=1;
                         textarea.value += "\r\n\t\tKilometer Event completed. You may proceed by executing: MOVE\r\n";
@@ -588,8 +593,12 @@ function sendMSG(){
                         states[3]=5;
                         textarea.value += "\r\n\r\n\t\tYou have perished in the line of duty. Your flesh will be requisitioned to the Organization.\r\n\t\t[RELOAD PAGE URL to RESTART]\r\n";
                     }
-                    else if(currEnemy[1] >= 0){
+                    else if(BossPick[1] >= 0){
                         generateCombatScene();
+                    }
+                    else if(BossPick[1]<=0){
+                        states[3]=6;
+                        textarea.value+="\r\n\t\tYou have won the fight!\r\nKilometer Event completed. You completed the DEMO!\r\n\t\tThanks for playing.\r\n";
                     }
                     else{
                         states[3]=6;
@@ -598,7 +607,7 @@ function sendMSG(){
                 }
             }
             else if (modID > 11 || modID < 0){
-
+                console.log("bad card");
             }
         }
         else if (modinput.search("choose") != -1 && (states[3]==2 || states[3]==4)){
