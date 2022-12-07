@@ -23,8 +23,8 @@ The main focus of this project was utilizing JavaScript (mainly), JQuery and int
 This text terminal exists in the form of a textarea with the value being modified as the game progresses. To the developer's surprise, this textarea was readable by a screenreader and was able to read updated text.
 However, the developer has not actually experienced the text reader themselves. Some data of the project is stored in multiple JSONs.
 
-__Has the minimum viable product been delivered?__      **Yes.**
-__Any code inefficiencies?__      **Definitely.**
+__Has the minimum viable product been delivered?__      **Yes.**  
+__Any code inefficiencies?__      **Definitely.**  
 __If you were to spend more time on this, what would you change?__  
 - **Allocate more defined functions to reduce code and redundant writing.**
 - **Add more descriptive lines within the text terminal to describe current situations.**
