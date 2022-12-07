@@ -40,4 +40,5 @@ _If you were to spend more time on this, what would you change?_
 Video
 -----
 
-[DEMO: Tunnel of Asplen Project](https://youtu.be/2co34TAihYU)
+[DEMO: Tunnel of Asplen Project](https://youtu.be/2co34TAihYU)  
+["PLAYABLE" DEMO: Tunnel of Asplen Project](https://coatedcap.github.io/FinalPush/index.html)
