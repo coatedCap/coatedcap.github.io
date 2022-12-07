@@ -1,4 +1,6 @@
 # coatedcap.github.io
+tranj21@wwu.edu for further contact information regarding any project folder above
+
 
 Disclaimer
 ==========
@@ -23,13 +25,17 @@ The main focus of this project was utilizing JavaScript (mainly), JQuery and int
 This text terminal exists in the form of a textarea with the value being modified as the game progresses. To the developer's surprise, this textarea was readable by a screenreader and was able to read updated text.
 However, the developer has not actually experienced the text reader themselves. Some data of the project is stored in multiple JSONs.
 
-_Has the minimum viable product been delivered?_      **Yes.**  
+_Has the minimum viable product been delivered?_      **Yes. Though it has spotty performance and works fluidly ~60% of the time**  
 _Any code inefficiencies?_      **Definitely.**  
 _If you were to spend more time on this, what would you change?_  
-- **Allocate more defined functions to reduce code and redundant writing.**
-- **Add more descriptive lines within the text terminal to describe current situations.**
-- **Implement the the original scope and other pages for the project.**
-- **More loose image visuals to add more immersion beyond the text only format.**
+- Allocate more defined functions to reduce code and redundant writing.
+- Add more descriptive lines within the text terminal to describe current situations.
+- Implement the the original scope and other pages for the project.
+- More loose image visuals to add more immersion beyond the text only format.
+- Fix variations logic and flag errors within the code mainly pertaining to combat and choice states (as seen in the demo)
+- Reduce volatility of the code and general clean-up.
+- Not use JavaScript due to being a primitive and typeless language which isn't my strongest suite.
+  - Likely to use C# or the ASP.NET framework.
 
 Video
 -----
